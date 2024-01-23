@@ -1,0 +1,46 @@
+:root {
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
+
+/* body {
+  margin: 0;
+  height: 100vh;
+  background-color: #0f173dfa;
+  background-image: url(https://since1979.dev/wp-content/uploads/2022/01/todd-quackenbush-x5srhkfajra-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+} */
+
+.mask {
+    /* display: none; */
+    /* background-attachment: fixed; */
+
+    width: 100vw;
+    height: 100%;
+
+    background-color: #0f172ad0;
+    /* background-color: #0f173a; */
+    /* background-color: #0f179ad0; */
+    /* background-color: darkgrey; */
+    /* background-color: white; */
+
+
+    mask: radial-gradient(circle at var(--mouse-x) var(--mouse-y),
+            transparent 20px,
+            /* #0f179a 550px */
+            /* lightgrey 550px); */
+            /* white 550px); */
+
+
+
+    /* -webkit-mask: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    transparent 20px,
+    #0f172a 550px
+    lightgrey 550px
+
+
+
+  ); */
+}
