@@ -116,7 +116,15 @@ a {
 
 h1 a{ color:#e2e8f0 }
 
-nav li {
+/* nav links - among else set animate */
+/* nav li {
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    left: 70px;
+    transition-duration: .37s;
+} */
+nav a {
     margin-bottom: 20px;
     display: block;
     position: relative;
@@ -124,13 +132,7 @@ nav li {
     transition-duration: .37s;
 }
 
-nav li:nth-of-type(1) {
-    margin-bottom: 20px;
-    display: block;
-    position: relative;
-    left: 110px;
-}
-
+/* line before nav text - make exist */
 nav a:before {
         content: "";
         display: block;
@@ -142,7 +144,16 @@ nav a:before {
         position: absolute;
 }
 
-#nav-about:before {
+/* nav link text make light on state */
+a:hover,
+a.active {
+    color: #e2e8f0;
+}
+
+/* line before nav links - make light and long on state */
+nav a:hover:before,
+nav a.active:before
+{
         content: "";
         display: block;
         width: 90px;
@@ -153,35 +164,18 @@ nav a:before {
         position: absolute;
 }
 
-#nav-about {
-    color: #e2e8f0;
-}
-
-a:hover {
-    color: #e2e8f0;
-}
-
-nav a:hover:before {
-        content: "";
-        display: block;
-        width: 90px;
-        height: 2px;
-        background: #e2e8f0;
-        left: -110px;
-        top: 30%;
-        position: absolute;
-}
-
-nav li:hover:not(first-child) {
+/* extend nav a:before on state */
+nav a:hover,
+nav a.active
+{
     display: block;
     position: relative;
+    /* left: 40px; */
     left: 110px;
 }
 
 .social {
     display: flex;
-    /* justify-content: center; */
-    /* justify-content: space-between; */
     margin-top: 1em
 }
 

@@ -21,11 +21,11 @@
                     <p>Fighting dragons with shiny swords</p>
                     <nav class="nav-toggle">
                         <ol>
-                            <!-- <li><a href="#">ABOUT</a></li> -->
-                            <li><a id="nav-about" href="#">ABOUT</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <!-- <li><a id="nav-about" href="#">ABOUT</a></li> -->
                             <li><a href="#experience">EXPERIENCE</a></li>
                             <!-- <li><a rel="noopener" target="_blank" href="#experience">EXPERIENCE</a></li> -->
-                            <li><a href="#">PROJECTS</a></li>
+                            <li><a href="#projects">PROJECTS</a></li>
                         </ol>
                     </nav>
                     <div class="">
@@ -126,24 +126,30 @@
 <!-- <script src="./light.js"></script> -->
     <!-- <script src="./js/icons.js"></script> -->
     <script>
-        console.log('hello')
+// console.log('hello')
         const sections = document.querySelectorAll('section');
-        console.log(sections)
+// console.log(sections)
         const navLinks = document.querySelectorAll('header nav a');
-        console.log(navLinks)
+        const listItem = document.querySelectorAll('header li');
+// console.log(navLinks)
+// console.log(navLi)
         window.onscroll= () => {
-            sections.forEach(sec => {
-                // console.log(sec)
+            sections.forEach(section => {
+// console.log(section)
                 let top = window.scrollY;
-                let offset = sec.offsetTop - 150;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
+                let offset = section.offsetTop - 150;
+                let height = section.offsetHeight;
+                let id = section.getAttribute('id');
                 if(top >= offset && top < offset + height) {
                     navLinks.forEach(links => {
-                        console.log(links)
+// console.log(links)
                         links.classList.remove('active');
                         document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
                     })
+                    // navLi.forEach(li => {
+                    //     // console.log(li);
+                    //     li.querySelector('header li[href*=' + id + ']').classList.add('active');
+                    // })
                 }
             })
         }
